@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetário da UFMA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Planetário da UFMA</h1>
+        <p>Explore o universo e mergulhe em uma jornada cósmica!</p>
+        <nav>
+            <ul>
+                <li><a href="#agendar">Agendar Visita</a></li>
+                <li><a href="#informacoes">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="destaque">
+        <div class="conteudo-destaque">
+            <h2>Desvende os Mistérios do Cosmos</h2>
+            <p>No Planetário da UFMA, você embarca em uma aventura espacial inesquecível! Nossa tecnologia de ponta e programação educativa proporcionam uma experiência imersiva para todas as idades. Explore planetas distantes, galáxias espirais e nebulosas coloridas em nosso domo de projeção. </p>
+            <a href="#agendar" class="btn">Agende sua Visita</a>
+        </div>
+    </section>
+
+    <section id="agendar">
+        <h2>Agende sua visita</h2>
+        <form id="formulario-agendamento">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" min="" required>
+
+            <label for="horario">Horário:</label>
+            <select id="horario" name="horario" required>
+                <option value="9:00">9:00</option> 
+            </select>
+
+            <button type="button" id="btnConfirmar">Confirmar</button>
+        </form>
+        <div id="confirmacao"></div>
+    </section>
+
+    <section id="informacoes">
+        <h2>Informações sobre o Planetário</h2>
+        <div class="info-container"> 
+            <div class="info-card">
+                <h3>Tecnologia de Ponta</h3>
+                <p>Equipamentos de última geração para projeções imersivas.</p>
+            </div>
+            <div class="info-card">
+                <h3>Programação Educativa</h3>
+                <p>Palestras e workshops sobre astronomia e ciência.</p>
+            </div>
+            <div class="info-card">
+                <h3>Visitas Guiadas</h3>
+                <p>Experimente a magia do céu estrelado com nossos guias especializados.</p>
+            </div>
+            <div class="info-card">
+                <h3>Localização</h3>
+                <p>Fácil acesso no campus da Universidade Federal do Maranhão.</p>
+            </div>
+        </div> 
+    </section>
+
+    <footer>
+        <p>© 2024 Planetário da UFMA</p> 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

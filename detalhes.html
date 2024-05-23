@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Agendamento - Planetário da UFMA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Agendamento</h1>
+        <p>Preencha os dados abaixo para completar o agendamento.</p>
+    </header>
+
+    <section id="informacoes-visita">
+        <h2>Informações sobre a Visita ao Espaço da Ciência e do Firmamento</h2>
+        <p>A visita ao Espaço da Ciência e do Firmamento (ECF) na Universidade Federal do Maranhão (UFMA) é uma experiência educativa guiada, projetada para proporcionar aos visitantes uma compreensão mais profunda da ciência e do universo.</p>
+        <h3>Número de Visitantes e Preparação</h3>
+        <p>O número máximo de visitantes permitido por visita é de 40 pessoas. Isso inclui até 35 alunos e 5 acompanhantes ou responsáveis. É importante que os visitantes estejam preparados para a visita, trazendo água e lanches para garantir o conforto durante a experiência.</p>
+        <h3>Agendamento da Visita</h3>
+        <p>Devido à alta demanda de visitações ao ECF, é necessário solicitar a visita com antecedência por meio desse formulário. Após a solicitação, o ECF enviará uma resposta confirmando a disponibilidade da data e do horário solicitado. Isso garante que todos os visitantes tenham a oportunidade de explorar o espaço de maneira organizada e eficiente.</p>
+    </section>
+
+    <section id="formulario-detalhes">
+        <h2>Formulario de Agendamento</h2>
+        <form id="form-visita">
+            <input type="hidden" id="dataVisita" name="dataVisita">
+            <input type="hidden" id="horarioVisita" name="horarioVisita">
+            <label for="nomeInstituicao">Nome da Instituição:</label>
+            <input type="text" id="nomeInstituicao" name="nomeInstituicao" required><br>
+
+            <label>Rede de ensino:</label>
+            <input type="radio" id="redePublica" name="redeEnsino" value="Publica" required>
+            <label for="redePublica">Pública</label>
+            <input type="radio" id="redePrivada" name="redeEnsino" value="Privada">
+            <label for="redePrivada">Privada</label>
+            <input type="radio" id="redeOutro" name="redeEnsino" value="Outro">
+            <label for="redeOutro">Outro:</label><br>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required><br>
+
+            <label for="endereco">Endereço (Rua, número e bairro):</label>
+            <input type="text" id="endereco" name="endereco" required><br>
+
+            <label for="diretor">Diretor(a):</label>
+            <input type="text" id="diretor" name="diretor" required><br>
+
+            <label for="telefoneDiretor">Telefone do Diretor(a):</label>
+            <input type="tel" id="telefoneDiretor" name="telefoneDiretor" required><br>
+
+            <label for="professorResponsavel">Professor Responsável pela visita:</label>
+            <input type="text" id="professorResponsavel" name="professorResponsavel" required><br>
+
+            <label for="telefoneResponsavel">Telefone do Responsável:</label>
+            <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" required><br>
+
+            <label for="emailResponsavel">E-mail do Responsável:</label>
+            <input type="email" id="emailResponsavel" name="emailResponsavel" required><br>
+
+            <label for="numeroAlunos">Número de Alunos:</label>
+            <input type="number" id="numeroAlunos" name="numeroAlunos" min="1" max="35" required><br>
+
+            <label for="nivelEnsino">Nível de Ensino:</label>
+            <select id="nivelEnsino" name="nivelEnsino" required>
+                <option value="Fundamental">Fundamental</option>
+                <option value="Médio">Médio</option>
+                <option value="Superior">Superior</option>
+                <option value="AEE">AEE</option>
+            </select><br>
+
+            <label for="serieAno">Série/Ano:</label>
+            <input type="text" id="serieAno" name="serieAno" required><br>
+
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+    </section>
+
+    <script>
+        // Recupera os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const data = urlParams.get('data');
+        const horario = urlParams.get('horario');
+
+        // Define os valores nos campos do formulário
+        document.getElementById('dataVisita').value = data;
+        document.getElementById('horarioVisita').value = horario;
+
+        // Adiciona um evento de envio ao formulário de detalhes
+        const formDetalhes = document.getElementById('form-visita');
+        formDetalhes.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Lógica para enviar os dados do formulário para o servidor (ex. via AJAX)
+            // ...
+
+            // Imprime as informações do agendamento
+            window.print();
+        });
+    </script>
+</body>
+</html>

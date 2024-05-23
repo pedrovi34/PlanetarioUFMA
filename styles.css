@@ -1,0 +1,185 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1a2b; /* Azul marinho escuro */
+    color: #fff;
+}
+
+header {
+    background-color: #142a47; /* Azul marinho */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#agendar, #informacoes, #formulario-detalhes {
+    background-color: #0d1a2b; /* Azul marinho escuro */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    color: #ffd700; /* Amarelo ouro */
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background-color: #142a47; /* Azul marinho */
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.info-card h3 {
+    color: #ffd700; /* Amarelo ouro */
+}
+
+footer {
+    background-color: #142a47; /* Azul marinho */
+    padding: 10px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input[type="date"], input[type="text"], input[type="tel"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ffd700; /* Amarelo ouro */
+    color: #0d1a2b; /* Azul marinho escuro */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e6c300; /* Amarelo ouro mais escuro */
+}
+
+#confirmacao {
+    margin-top: 20px;
+    color: #4CAF50; /* Verde */
+    font-weight: bold;
+}
+
+/* Estilos para a seção de destaque */
+#destaque {
+    background-image: url("caminho/para/sua/imagem.jpg"); /* Substitua pela URL da sua imagem */
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Para posicionar o overlay */
+}
+
+#destaque::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro semi-transparente */
+}
+
+.conteudo-destaque {
+    position: relative; /* Para ficar acima do overlay */
+    z-index: 1; /* Garante que o conteúdo fique visível */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.conteudo-destaque h2 {
+    color: #ffd700;
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: brilho 3s infinite alternate; /* Animação de brilho */
+}
+
+/* Animação de brilho */
+@keyframes brilho {
+    from {
+        text-shadow: 0 0 10px #ffd700;
+    }
+    to {
+        text-shadow: 0 0 20px #ffd700, 0 0 30px #e6c300;
+    }
+}
+
+.conteudo-destaque p {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #0d1a2b;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6c300;
+}
